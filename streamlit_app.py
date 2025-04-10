@@ -153,4 +153,7 @@ def get_conversation_chain(vetorestore,openai_api_key):
 
 
 if __name__ == '__main__':
-    main()
+    # st.set_page_config(page_title="DirChat", page_icon=":books:")
+    # st.title("DirChat :books:")
+    main()    
+    
