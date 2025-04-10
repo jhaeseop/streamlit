@@ -5,7 +5,8 @@ unstructured
 sentence-transformers
 faiss-cpu
 tiktoken
-openai
 pypdf
 loguru
 docx2txt
+langchain_community
+langchain-google-genai
