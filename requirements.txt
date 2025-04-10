@@ -10,3 +10,4 @@ loguru
 docx2txt
 langchain_community
 langchain-google-genai
+google-generativeai
