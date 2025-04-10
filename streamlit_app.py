@@ -16,8 +16,8 @@ def main():
     st.set_page_config(
         page_title="DaejinBus",
         page_icon=":books:")
-#_대진대학교 통학버스
-    st.title("_버스 :red[QA Chat]_ :books:")
+
+    st.title("_GENAI :red[QA Chat]_ :books:")
 
     if "conversation" not in st.session_state:
         st.session_state.conversation = None
@@ -48,7 +48,7 @@ def main():
 
     if 'messages' not in st.session_state:
         st.session_state['messages'] = [{"role": "assistant", 
-                                        "content": "안녕하세요! gemini입니다! 질문사항을 적어주세요!"}]
+                                        "content": "안녕하세요! genai입니다! 질문사항을 적어주세요!"}]
 
     for message in st.session_state.messages:
         with st.chat_message(message["role"]):
@@ -133,7 +133,7 @@ def get_vectorstore(text_chunks):
 
 def get_conversation_chain(vectorstore, google_api_key):
     try:
-        llm = ChatGoogleGenerativeAI(google_api_key=google_api_key, model='gemini-1.5-pro')
+        llm = ChatGoogleGenerativeAI(google_api_key=google_api_key, model='gemini-2.0-flash-exp')
         conversation_chain = ConversationalRetrievalChain.from_llm(
             llm=llm, 
             chain_type="stuff", 
